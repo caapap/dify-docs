@@ -112,6 +112,7 @@
                                                     "en/guides/workflow/node/answer",
                                                     "en/guides/workflow/node/llm",
                                                     "en/guides/workflow/node/knowledge-retrieval",
+                                                    "en/guides/workflow/node/human-in-the-loop",
                                                     "en/guides/workflow/node/question-classifier",
                                                     "en/guides/workflow/node/ifelse",
                                                     "en/guides/workflow/node/code",

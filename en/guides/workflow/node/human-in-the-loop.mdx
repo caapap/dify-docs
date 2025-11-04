@@ -1,0 +1,81 @@
+---
+title: Human in the Loop
+---
+
+## Introduction
+
+The Human in the Loop (HITL) node pauses <Tooltip tip="Both Workflows and Chatflows are types of workflows.">your workflow</Tooltip> at critical points to collect human input, review, or decisions before execution continues.
+
+![Human in the Loop Node]()
+
+When the workflow reaches this node, it generates a customizable interface that can be delivered through multiple channels (web app, email, Slack, etc.). Through this interface, a person can review data, provide input, and choose from predefined actions (like `Approve` or `Regenerate`) that determine how the workflow proceeds.
+
+![Delivered Interface]()
+
+Think of it as a *pause* button that solves a fundamental challenge: pure automation sacrifices quality control, while pure manual processes sacrifice efficiency. By embedding human judgment directly where it matters, you can **balance automated efficiency with human oversight**.
+
+---
+
+Here's how the HITL node can strengthen your Dify apps:
+
+- **Enhance Quality Control**: Add a human review layer for AI-generated outputs before they are published or sent.
+    > Example: Let a content editor review and approve AI-generated blog posts before they are automatically published.
+
+- **Improve Flexibility**: Handle unexpected situations by letting users supply missing details or make corrections mid-workflow.
+    > Example: In a support automation flow, request extra information from a user when ticket data is incomplete.
+
+- **Streamline Collaboration**: Bring non-technical members (such as editors, managers, or support staff) directly into workflows without complex integrations.
+    > Example: A project manager receives a quick Slack prompt to review and approve an AI-generated update.
+
+## Configure an HITL Node
+
+To make an HITL node work properly, you need to configure the following:
+
+- **Delivery method**: How the task reaches whom
+
+- **Form content**: What information users see and edit
+
+- **User action**: What actions users can take & how the workflow should respond accordingly
+
+- **Timeout strategy**: What happens if no human response is received in time
+
+### Delivery Method
+
+Built-in web app / email support
+
+Enable, delete, configure, debug / test
+
+<Tip>
+    To learn about testing available delivery methods, see [Test an HITL Node](#test-an-hitl-node).
+</Tip> 
+
+### Form Content
+
+Preview
+insert variable / input field
+
+### User Actions
+
+Next step
+Customizable button style
+
+### Timeout Strategy
+
+To prevent your workflow from getting stuck infinitely waiting for a response, you need to define a timeout strategy so it can resume automatically by following a fallback path if no recipients act.
+
+- **Timeout period**: How long the workflow should wait (in hours or days) before timing out.
+
+- **Timeout path**: The fallback branch the workflow follows when no user responds within the set timeout period. It can lead to a notification or an automatic decision.
+
+## Test an HITL Node
+
+### Web App
+
+### Email
+
+## Best Practices
+
+- Combine HITL with IF/ELSE nodes to build conditional logic for dynamic decision-making.
+    > Example:
+
+- 
